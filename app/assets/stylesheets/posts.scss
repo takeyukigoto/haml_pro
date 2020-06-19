@@ -1,3 +1,8 @@
+*{
+  box-sizing: border-box;
+}
+
+
 .wrapper{
   width: 100%;
   height: 100%;
@@ -62,18 +67,45 @@ a:hover{
 
 
 
+@media (max-width: 1000px) {
+  .header-content__logo {
+  font-size: 35px;
+  margin-top: 5px;
+  }
+  .header-nav-container ul {
+    font-size: 20px;
+    padding-top: 15px;
+  }
+}
+
+
+@media (max-width: 670px) {
+  .header-content__logo {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 5px;
+    }
+    .header-nav-container ul {
+      font-size: 20px;
+      padding-top: 15px;
+      margin-left: 10px;
+    }
+}
+
+
+
+
 .cover{
 width: 100%;
-height: 400px;
 }
 
 
 .cover-content{
 width: 100%;
-height: 400px;
 background-image: url(https://cdn.pixabay.com/photo/2020/05/29/22/00/field-5236879_960_720.jpg);
 background-size:  cover;
 background-position: center; 
+height: 400px;
 &__comment{
 max-width: 950px;
 width: 100%;
@@ -86,33 +118,61 @@ color:#FF33FF;
 h2{
 color: #FF33FF;
 font-size: 50px;
-// padding-left: 60px;
+
 }  
 }
 }
 
+
+@media (max-width: 1000px) {
+  .cover-content__comment {
+  h1{
+    font-size: 60px;
+  }
+  h2{
+    font-size: 60px;
+  }
+}
+}
+
+@media (max-width: 670px) {
+  .cover-content__comment {
+    h1{
+      font-size: 45px;
+      margin-left: 5px;
+    }
+    h2{
+      font-size: 45px;
+      margin-left: 5px;
+    }
+  }
+}
+
+
+
 .about-content{
 width: 100%;
-height: 300px;
+padding-top: 10px;
 background-color: #EEE8AA	;
 &__comment{
 max-width: 950px;
 width: 100%;
 margin: auto;
-display: flex;
-justify-content: flex-start;
 font-size: 50px;
+display: flex;
+justify-content: start;
 h2{
 font-size: 50px;
+margin-top: 20px;
 }
 &__image{
   img{
 height: 150px;
 width: 150px;
 object-fit: cover; 
-padding-top: 80px;
-padding-right: 30px;
-margin-left: -140px;
+margin-top: 90px;
+margin-left: -150px;
+margin-right: 20px;
 }
 }
 img:hover{
@@ -121,7 +181,7 @@ img:hover{
 &__text {
   h5{
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 65px;
   }
   p{
     font-size: 20px;
@@ -130,11 +190,50 @@ img:hover{
 }
 }
 }
+ 
+  
+
+@media (max-width: 670px) {
+  .about-content__comment {
+    display: block;
+    text-align: left;
+  h2{
+    font-size: 40px;
+    margin-left: 5px;
+    }
+    &__image{
+    img{
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    object-fit: cover; 
+    text-align: center;
+    margin-left: 5px;
+    } 
+}
+  }
+
+
+  .about-content__comment__text {
+    h5{
+      font-size: 20px;
+      padding-top: 10px;
+      margin-left: 5px;
+    }
+    p{
+      font-size: 20px;
+      padding-top: 10px;
+      margin-left: 5px;
+    }
+  }  
+}
+
+
 
 
 .work-content{
 width: 100%;
-height: 600px;
+padding-top: 50px;
 background-color: #EEE8AA;
 &__comment{
 max-width: 950px;
@@ -193,17 +292,42 @@ img:hover{
 }
 }
 
+@media (max-width: 670px) {
+  .work-content__comment {
+    display: block;
+    text-align: left;
+    padding-top: 10px;
+    margin-left: 5px;
+    h2{
+      font-size: 40px;
+      margin-left: 5px;
+  }
+  }
+
+
+  .work-content__comment__textleft{
+    padding-top: 5px;
+    h2{
+    font-size: 20px;
+    padding-top: 10px;
+    margin: 0 auto;
+    }
+    img{
+      margin: 0 auto;
+  }
+}
+}
 
 
 .faq-wrapper{
   width: 100%;
+  padding-top: 50px;
   background-color: #EEE8AA;
 }
 
 .container{
 max-width: 950px;
 width: 100%;
-height: 330px;
 margin: auto;
 }
 
@@ -216,7 +340,6 @@ margin: auto;
 
 /*アコーディオン追加 */
 .faq-list-item {
-  margin:10px;
   border-bottom:1px solid #ccc;
   position:relative;
   cursor:pointer;
@@ -239,12 +362,15 @@ margin: auto;
   font-size: 12px;
   display: none;
   padding: 5px 0px;
-  margin-bottom: 15px;
 }
 
 
 
-
+@media (max-width: 670px) {
+  .container {
+    margin-left: 5px;
+  }
+}
 
 
 
@@ -260,7 +386,7 @@ margin: auto;
 
 .contact-content{
 width: 100%;
-height: 200px;
+padding-top: 50px;
 background-color: #EEE8AA;
 &__text{
 max-width: 950px;
@@ -271,7 +397,7 @@ h2{
   font-size: 50px;
 }
 &__mail{
-padding-top: 100px;
+padding-top: 70px;
 padding-right: 30px;
 margin-left: -160px;
 h3{
@@ -279,7 +405,7 @@ font-size: 20px;
 }
 }
 &__comment{
-padding-top: 100px;
+padding-top: 30px;
 .btn {
   background-color: #FFD700;
   padding: 15px 40px;
@@ -296,6 +422,13 @@ padding-top: 100px;
 }
 
 
+@media (max-width: 670px) {
+  .contact-content__text {
+    margin-left: 5px;
+  }
+}
+
+
 .footer{
   width: 100%;
   height: 50px;
@@ -308,4 +441,10 @@ margin: auto;
 display: flex;
 }
 
+}
+
+@media (max-width: 670px) {
+  .fotter-content__item {
+    margin-left: 5px;
+  }
 }
